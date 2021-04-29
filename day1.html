@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hi there</h1>
+</body>
+<script>
+
+    const shoppingList = ["tomatoes","apples", "eggs"]
+
+    const filteredShoppingList = shoppingList.filter(function(thing){
+        return thing.length < 7
+    })
+
+    for (let i = 0; i < shoppingList.length; i=i+1) {
+    }
+
+
+
+    var start = 0
+
+    function inc(number) {return number + 1}
+
+    var userEmail = "g reg.thompson@gmail.com"
+
+    // PURE FUNCTIONS
+    function fixEmailPure(email) {
+        return email.replaceAll(" ", "")
+    }
+
+    // NON-PURE (MUTATIVE) FUNCTIONS
+    function fixEmailMutative(email) {
+        userEmail = email.replaceAll(" ", "")
+    }
+
+
+
+    function hello() {
+    }
+
+    function helloName(name) {
+    }
+    helloName("AAAA")
+    helloName("BBBB")
+    hello("OQWIDJQWOIDJWQOIDJ")
+
+
+
+
+    var pikachu = "pikachu";
+    let jigglypuff = "jigglypuff";
+
+
+    if (true) {
+        var pikachu = "I don't know who I am anymore :(";
+        let jigglypuff = "I don't know who I am anymore :(";
+    }
+    console.log(pikachu)
+    console.log(jigglypuff)
+
+    function example() {
+        return 2 + 2 
+    }
+
+    const res = example()
+
+    console.log(res)
+
+</script>
+</html>

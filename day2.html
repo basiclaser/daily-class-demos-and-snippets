@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    shopping list app
+    <ol id="receipt"></ol>
+</body>
+<script>
+    const desiredItems = [
+        {name: "bananas", price: 1},
+        {name: "oranges", price: 2},
+        {name: "wc paper", price: 2},
+        {name: "beer", price: 1},
+        {name: "snacks", price: 3},
+        {name: "tomatoes", price: 2},
+        {name: "potatoes", price: 8},
+        {name: "lemons", price: 3},
+        {name: "apples", price: 4},
+        {name: "caviar", price: 6},
+    ]
+    let currentTotal = 0;
+    const totalBudget = 11;
+    let finalisedShoppingList = [];
+
+    for (let index = 0; index < desiredItems.length; index++) {
+        if( currentTotal + desiredItems[index].price < totalBudget) {
+            currentTotal = currentTotal + desiredItems[index].price ;
+            console.log(currentTotal)
+            finalisedShoppingList.push(desiredItems[index])
+        } else {
+            break
+        }
+    }
+
+    function prepareReceiptRow(product) {
+        return "<li>" + product.name.toUpperCase().substr(0,3) + " - €" + product.price +"</li>"
+    }
+
+    function printReciept (){
+        const receipt = finalisedShoppingList.map(prepareReceiptRow)
+        console.log(receipt)
+        document.getElementById("receipt").innerHTML = receipt.join("")
+    }
+
+    printReciept()
+
+
+</script>
+</html>
