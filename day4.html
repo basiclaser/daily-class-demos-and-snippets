@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    my listy thing
+    
+    <ul id="list"></ul>
+</body>
+<script>
+    let students = ["Chigozie","Chris","Pavel","Enis"]
+    students.push("ChMihail")
+
+    function addTodo(){}
+    function deleteTodo(){}
+    function toggleTodoCompleted(){}
+
+    const html = students
+    .filter(function(item){return item.includes("Ch")})
+    .map(function(item){ return `<li>${item}</li>`})
+    .join(" ")
+    document.querySelector("#list").innerHTML = html
+
+
+</script>
+</html>
